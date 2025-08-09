@@ -9,10 +9,10 @@
 
 *Seruple adalah sebuah library dart dan flutter untuk memudahkan kamu membangun applikasi gui / cli*
 
+</div>
 
 ![](https://github.com/azkadev/seruple/blob/main/assets/images/seruple.jpg)
 
-</div>
 
 ---
 
