@@ -1,7 +1,6 @@
-
 import 'dart:math';
 
-
+/// generate uuid
 String generateUuidazkadev(
   int length, {
   String text = "0123456789abcdefghijklmnopqrstuvwxyz",
@@ -11,4 +10,3 @@ String generateUuidazkadev(
     return dataText;
   }).join("");
 }
-
