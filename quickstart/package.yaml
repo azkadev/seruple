@@ -1,0 +1,80 @@
+name: seruple
+description: 'seruple azkadev'
+version: '0.0.0'
+publish_to: 'none'
+homepage: 'https://youtube.com/@azkadev'
+repository: 'https://github.com/azkadev/seruple'
+issue_tracker: 'https://github.com/azkadev/seruple/issues'
+documentation: 'https://youtube.com/@azkadev'
+funding:
+  - 'https://github.com/sponsors/azkadev'
+  - "https://www.patreon.com/c/azkadev"
+  - "https://opencollective.com/azkadev"
+  - "https://paypal.me/azkadev"
+platforms:
+  android: null
+  ios: null
+  linux: null
+  macos: null
+  web: null
+  windows: null
+
+general_script_language:
+  dev_dependencies:
+    lints: '^5.0.0'
+    test: 'any'
+
+general_public_language:
+  dev_dependencies:
+    lints: '^5.0.0'
+    test: 'any'
+
+dart:
+  dev_dependencies:
+    lints: '^5.0.0'
+    test: 'any'
+
+python:
+  dev_dependencies:
+    lints: '^5.0.0'
+    test: 'any'
+
+javascript:
+  dev_dependencies:
+    lints: '^5.0.0'
+    test: 'any'
+
+
+
+action:
+
+  - name: Linux
+    id: build_linux
+    comment: general-language --command action run --id build_linux
+    environment:
+      VERSION: "build"
+    action:
+      - title: "Cleaning"
+        platform:
+          linux: true
+        run:
+          - title: "Clean Folder"
+            type: shell
+            is_continue_on_error: true
+            shell: |
+              rm -rf $BUILD_DIR
+              gpl clean
+
+      - title: "Compiling"
+        platform:
+          linux: true
+        run:
+          - title: "Compile Shared Library"
+            type: shell
+            shell: |
+              gpl -build_type library build
+
+          - title: "Compile Executable"
+            type: shell
+            shell: |
+              gpl -build_type exe build

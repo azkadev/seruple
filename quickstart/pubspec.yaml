@@ -1,0 +1,32 @@
+name: "quickstart"
+description: "quickstart is program for help you, booster up your projects significants with amazing features and super easy for use"
+version: "0.0.0"
+homepage: "https://youtube.com/@azkadev"
+repository: "https://github.com/azkadev/seruple"
+issue_tracker: "https://github.com/azkadev/seruple/issues"
+documentation: "https://github.com/azkadev/seruple"
+funding:
+  - "https://github.com/sponsors/azkadev"
+  - "https://www.patreon.com/c/azkadev"
+  - "https://opencollective.com/azkadev"
+  - "https://paypal.me/azkadev"
+
+publish_to: none
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+dependencies:
+  seruple:
+    path: ../package/seruple
+dev_dependencies:
+  lints: '^5.0.0'
+  test: 'any'
+project:
+  type: ''
+  is_use_direct_package: false
+  is_private: false
+  developers:
+    - username: ''
+      note: ''
+      social_medias:
+        - 'https://github.com'
+
